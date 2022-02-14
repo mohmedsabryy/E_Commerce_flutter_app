@@ -1,6 +1,11 @@
+import 'package:ecommerceflutterapp/routes/routes.dart';
 import 'package:ecommerceflutterapp/utils/theme.dart';
+import 'package:ecommerceflutterapp/view/screen/auth/login_Screen.dart';
+import 'package:ecommerceflutterapp/view/screen/auth/singup_screen.dart';
 import 'package:ecommerceflutterapp/view/widgets/text_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -83,6 +88,11 @@ class WelcomeScreen extends StatelessWidget {
                     const SizedBox(
                       height: 250,
                     ),
+
+
+                    // buttom Get Start
+
+
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           primary: mainColor,
@@ -93,7 +103,9 @@ class WelcomeScreen extends StatelessWidget {
                             horizontal: 40,
                             vertical: 12,
                           )),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.off(const LoginScreen());
+                      },
                       child: const TextUtils(
                         fontsize: 22,
                         fontWeight: FontWeight.bold,
@@ -108,6 +120,9 @@ class WelcomeScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+
+
+                        // text
                         const TextUtils(
                           text: "Don't have an Account ?",
                           fontsize: 18,
@@ -118,8 +133,14 @@ class WelcomeScreen extends StatelessWidget {
                         const SizedBox(
                           width: 20,
                         ),
+
+
+
+                        // Buttom  Sign Up
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.off( SignUpScreen());
+                          },
                           child: const TextUtils(
                             text: 'Sign Up',
                             fontsize: 18,
