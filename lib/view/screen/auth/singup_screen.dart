@@ -181,7 +181,6 @@ class SignUpScreen extends StatelessWidget {
                   text: "Already have an Account ? ",
                   TextType: "Log in ",
                 ) ,
-
               ],
             ),
           ),

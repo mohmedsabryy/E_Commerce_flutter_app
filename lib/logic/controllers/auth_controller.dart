@@ -19,4 +19,6 @@ class AuthController extends GetxController{
      update() ;
    }
 
+
+
 }

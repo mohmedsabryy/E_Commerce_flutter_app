@@ -75,12 +75,14 @@ class WelcomeScreen extends StatelessWidget {
                           SizedBox(
                             width: 7,
                           ),
-                          TextUtils(
-                            text: ' App',
-                            fontsize: 35,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            underline: TextDecoration.none,
+                          Expanded(
+                            child: TextUtils(
+                              text: ' App',
+                              fontsize: 30,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              underline: TextDecoration.none,
+                            ),
                           ),
                         ],
                       ),
@@ -104,7 +106,7 @@ class WelcomeScreen extends StatelessWidget {
                             vertical: 12,
                           )),
                       onPressed: () {
-                        Get.off( LoginScreen());
+                        Get.offNamed(Routes.loginScreen);
                       },
                       child: const TextUtils(
                         fontsize: 22,
@@ -139,7 +141,7 @@ class WelcomeScreen extends StatelessWidget {
                         // Buttom  Sign Up
                         TextButton(
                           onPressed: () {
-                            Get.off( SignUpScreen());
+                            Get.offNamed(Routes.signUpScreen);
                           },
                           child: const TextUtils(
                             text: 'Sign Up',

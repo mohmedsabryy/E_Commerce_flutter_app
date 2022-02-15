@@ -18,13 +18,15 @@ import 'package:get/get_navigation/src/extension_navigation.dart';
 
 
 class LoginScreen extends StatelessWidget {
-  final formKey =GlobalKey<FormState>() ;
-  final controller =Get.find<AuthController>() ;
-
   LoginScreen({Key? key}) : super(key: key);
+
+  final formKey =GlobalKey<FormState>() ;
+
 
   final TextEditingController emailController =TextEditingController() ;
   final TextEditingController passwordController =TextEditingController() ;
+  final controller = Get.find<AuthController>();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
