@@ -104,7 +104,7 @@ class WelcomeScreen extends StatelessWidget {
                             vertical: 12,
                           )),
                       onPressed: () {
-                        Get.off(const LoginScreen());
+                        Get.off( LoginScreen());
                       },
                       child: const TextUtils(
                         fontsize: 22,

@@ -1,3 +1,5 @@
+import 'package:ecommerceflutterapp/logic/bindings/auth_binding.dart';
+import 'package:ecommerceflutterapp/view/screen/auth/forgot_password_screen.dart';
 import 'package:ecommerceflutterapp/view/screen/auth/login_Screen.dart';
 import 'package:ecommerceflutterapp/view/screen/auth/singup_screen.dart';
 import 'package:ecommerceflutterapp/view/screen/welcome_screen.dart';
@@ -15,10 +17,18 @@ class AppRoutes{
     ),
     GetPage(
       name: Routes.loginScreen,
-      page:()=> const LoginScreen() ,
+      page:()=>  LoginScreen() ,
+      binding: AuthBinding(),
     ),  GetPage(
       name: Routes.signUpScreen,
       page:()=>  SignUpScreen() ,
+      binding: AuthBinding(),
+    ),
+    GetPage(
+      name: Routes.forgotPassword,
+      page:()=>   ForgotPassword() ,
+      binding: AuthBinding(),
+
     ),
   ];
 }
@@ -28,4 +38,5 @@ class Routes{
   static const welcomeScreen ='/welcomeScreen' ;
   static const loginScreen ='/loginScreen' ;
   static const signUpScreen ='/signUpScreen' ;
+  static const forgotPassword ='/forgotPassword' ;
 }
