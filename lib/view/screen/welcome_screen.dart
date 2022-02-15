@@ -108,7 +108,7 @@ class WelcomeScreen extends StatelessWidget {
                       onPressed: () {
                         Get.offNamed(Routes.loginScreen);
                       },
-                      child: const TextUtils(
+                      child:  const TextUtils(
                         fontsize: 22,
                         fontWeight: FontWeight.bold,
                         text: 'Get Start',
