@@ -56,7 +56,7 @@ class SignUpScreen extends StatelessWidget {
                               text: "SIGN",
                               fontsize: 28,
                               fontWeight: FontWeight.w500,
-                              color:Get.isDarkMode ? mainColor : pinkClr,
+                              color:Get.isDarkMode ? pinkClr : mainColor,
                               underline: TextDecoration.none,
                             ),
                             const SizedBox(width: 3,),
@@ -64,7 +64,7 @@ class SignUpScreen extends StatelessWidget {
                               text: "UP",
                               fontsize: 28,
                               fontWeight: FontWeight.w500,
-                              color:Get.isDarkMode ?Colors.black :Colors.white ,
+                              color:Get.isDarkMode ? Colors.white :Colors.black ,
                               underline: TextDecoration.none,
                             ),
                           ],
@@ -74,12 +74,13 @@ class SignUpScreen extends StatelessWidget {
                         AuthTextFromField(
                           controller: nameController,
                           obscureText: false,
-                          prefixIcon:Get.isDarkMode? Image.asset('assets/images/user.png')
-                              :const Icon(
-                            Icons.person ,
+                          prefixIcon: Get.isDarkMode
+                              ? const Icon(
+                            Icons.person,
                             color: pinkClr,
                             size: 30,
-                          ),
+                          )
+                              : Image.asset('assets/images/user.png'),
                           suffixIcon: const Text(''),
                           hintText: 'User Name ',
                           validator: (value)
@@ -98,11 +99,13 @@ class SignUpScreen extends StatelessWidget {
                         AuthTextFromField(
                           controller: emailController,
                           obscureText: false,
-                          prefixIcon:Get.isDarkMode? Image.asset('assets/images/email.png') :const Icon(
-                            Icons.email ,
+                          prefixIcon: Get.isDarkMode
+                              ? const Icon(
+                            Icons.email,
                             color: pinkClr,
                             size: 30,
-                          ),
+                          )
+                              : Image.asset('assets/images/email.png'),
                           suffixIcon: const Text(''),
                           hintText: 'Email ',
                           validator: (value)
@@ -124,21 +127,23 @@ class SignUpScreen extends StatelessWidget {
                               return  AuthTextFromField(
                                 controller: passwordController,
                                 obscureText:controller.isVisibility? false:true,
-                                prefixIcon: Get.isDarkMode?Image.asset('assets/images/lock.png') :const Icon(
-                                  Icons.lock ,
+                                prefixIcon: Get.isDarkMode
+                                    ? const Icon(
+                                  Icons.lock,
                                   color: pinkClr,
                                   size: 30,
-                                ),
+                                )
+                                    : Image.asset('assets/images/lock.png'),
                                 suffixIcon: IconButton(
                                   onPressed: (){
                                     controller.visibility();
                                   },
                                   icon:controller.isVisibility? Icon(
                                     Icons.visibility_off,
-                                    color: Get.isDarkMode? mainColor :pinkClr,
+                                    color: Get.isDarkMode?  pinkClr:mainColor,
                                   ):Icon(
                                     Icons.visibility ,
-                                    color: Get.isDarkMode? mainColor :pinkClr,
+                                    color: Get.isDarkMode? pinkClr :mainColor,
                                   ),
                                 ),
                                 hintText: 'Password ',
