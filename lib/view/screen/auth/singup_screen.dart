@@ -34,7 +34,7 @@ class SignUpScreen extends StatelessWidget {
             elevation: 0,
           ),
 
-          backgroundColor: Get.isDarkMode?Colors.white:darkGreyClr,
+          backgroundColor: context.theme.backgroundColor,
           body: SingleChildScrollView(
             child: Column(
               children: [
